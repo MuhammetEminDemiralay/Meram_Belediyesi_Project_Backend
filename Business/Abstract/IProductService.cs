@@ -16,10 +16,12 @@ namespace Business.Abstract
         IDataResult<List<Product>> GetByCategoryId(int categoryId);
         IResult Add(Product product);
         IResult Delete(Product product);
+        IResult Update(Product product);
         IResult AddTransactionalTest(Product product);
 
         IDataResult<List<ProductDetailDto>> GetProductDetails();
         IDataResult<List<ProductDetailDto>> GetProductDetailsByCategoryId(int categoryId);
         IDataResult<ProductDetailDto> GetProductDetailByProductId(int productId);
+        IDataResult<List<ProductDetailDto>> GetProductDetailsByUserId(int userId);
     }
 }

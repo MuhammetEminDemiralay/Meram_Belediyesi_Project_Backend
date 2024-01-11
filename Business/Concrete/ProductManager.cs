@@ -66,12 +66,23 @@ namespace Business.Concrete
 
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
-            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
+            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductsDetail());
         }
 
         public IDataResult<List<ProductDetailDto>> GetProductDetailsByCategoryId(int categoryId)
         {
-            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails(p => p.CategoryId == categoryId));
+            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductsDetail(p => p.CategoryId == categoryId));
+        }
+
+        public IDataResult<List<ProductDetailDto>> GetProductDetailsByUserId(int userId)
+        {
+            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductsDetail(p => p.UserId == userId));
+        }
+
+        public IResult Update(Product product)
+        {
+            _productDal.Update(product);
+            return new SuccessResult();
         }
 
         private IResult CheckIfProductNameExists(string productName)

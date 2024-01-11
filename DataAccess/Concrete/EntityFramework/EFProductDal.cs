@@ -25,6 +25,7 @@ namespace DataAccess.Concrete.EntityFramework
                              select new ProductDetailDto()
                              {
                                  Id = product.Id,
+                                 UserId = product.UserId,
                                  CategoryId = product.CategoryId,
                                  ProductName = product.ProductName,
                                  ProductImagePath = (from img in context.ProductImages where img.ProductId == product.Id select img.ProductImagePath).ToList(),
@@ -40,7 +41,7 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<ProductDetailDto> GetProductDetails(Expression<Func<ProductDetailDto, bool>> filter = null)
+        public List<ProductDetailDto> GetProductsDetail(Expression<Func<ProductDetailDto, bool>> filter = null)
         {
             using (var context = new MeramContext())
             {
@@ -51,6 +52,7 @@ namespace DataAccess.Concrete.EntityFramework
                              select new ProductDetailDto()
                              {
                                  Id = product.Id,
+                                 UserId = product.UserId,
                                  CategoryId = product.CategoryId,
                                  ProductName = product.ProductName,
                                  ProductImagePath = (from img in context.ProductImages where img.ProductId == product.Id select img.ProductImagePath).ToList(),
