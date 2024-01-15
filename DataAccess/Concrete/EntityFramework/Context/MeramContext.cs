@@ -15,6 +15,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Meram;");
         }
+        
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -22,6 +23,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Company> Companys { get; set; }
 
     }
 }

@@ -26,5 +26,16 @@ namespace Business.Constant
         public static string ProductNameAlreadyExists = "Ürün ismi zaten mevcut";
         public static string Maintance = "Bakım";
 
+        public static string UsersListed = "Kullanıcılar listelendi";
+        public static string UserGet = "Kullanıcı getirildi";
+        public static string UserAdded = "Kullanıcı eklendi";
+        public static string UserDelete = "Kullanıcı silindi";
+        public static string UserUpdate = "Kullanıcı güncellendi";
+        public static string CompanyGetall = "Şirketler listelendi";
+        public static string CompanyGet = "Şirket listelendi";
+        public static string CompanyAdd = "Şirket eklendi";
+        public static string CompanyUpdate = "Şirket güncellendi";
+        public static string CompanyDelete = "Şirket silindi";
+
     }
 }

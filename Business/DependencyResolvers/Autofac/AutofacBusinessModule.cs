@@ -26,6 +26,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EFCategoryDal>().As<ICategoryDal>().SingleInstance();
             builder.RegisterType<EFProductImageDal>().As<IProductImageDal>().SingleInstance();
             builder.RegisterType<ProductImageMagager>().As<IProductImageService>().SingleInstance();
+            builder.RegisterType<CompanyManager>().As<ICompanyService>().SingleInstance();
+            builder.RegisterType<EFCompanyDal>().As<ICompanyDal>().SingleInstance();
 
 
             builder.RegisterType<UserManager>().As<IUserService>();
