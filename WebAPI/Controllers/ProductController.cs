@@ -29,7 +29,7 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpGet("getproductbyproductıd")]
+        [HttpGet("getproductbyproductid")]
         public IActionResult GetProductDetailByProductId(int productId)
         {
             var result = _productService.GetProductDetailByProductId(productId);
@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpGet("getproductsbycategoryıd")]
+        [HttpGet("getproductsbycategoryid")]
         public IActionResult GetProductDetailByCategoryId(int categoryId)
         {
             var result = _productService.GetProductDetailsByCategoryId(categoryId);
@@ -53,7 +53,7 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpGet("getproductsbyuserıd")]
+        [HttpGet("getproductsbyuserid")]
         public IActionResult Get(int userId)
         {
             var result = _productService.GetProductDetailsByUserId(userId);
