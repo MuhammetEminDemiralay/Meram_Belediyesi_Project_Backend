@@ -27,12 +27,12 @@ namespace Business.Concrete
 
         public IResult Add(Product product)
         {
-            IResult result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName));
+            //IResult result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName));
 
-            if (result != null)
-            {
-                return result;
-            }
+            //if (result != null)
+            //{
+            //    return result;
+            //}
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
