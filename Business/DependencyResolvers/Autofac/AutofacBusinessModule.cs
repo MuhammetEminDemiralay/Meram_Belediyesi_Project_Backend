@@ -28,6 +28,24 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ProductImageMagager>().As<IProductImageService>().SingleInstance();
             builder.RegisterType<CompanyManager>().As<ICompanyService>().SingleInstance();
             builder.RegisterType<EFCompanyDal>().As<ICompanyDal>().SingleInstance();
+            builder.RegisterType<NewsManager>().As<INewsService>().SingleInstance();
+            builder.RegisterType<EFNewsDal>().As<INewsDal>().SingleInstance();
+            builder.RegisterType<NewsImageManager>().As<INewsImageService>().SingleInstance();
+            builder.RegisterType<EFNewsImageDal>().As<INewsImageDal>().SingleInstance();
+            builder.RegisterType<ProjectManager>().As<IProjectService>().SingleInstance();
+            builder.RegisterType<EFProjectDal>().As<IProjectDal>().SingleInstance();
+            builder.RegisterType<ProjectCategoryManager>().As<IProjectCategoryService>().SingleInstance();
+            builder.RegisterType<EFProjectCategoryDal>().As<IProjectCategoryDal>().SingleInstance();
+            builder.RegisterType<ProjectImageManager>().As<IProjectImageService>().SingleInstance();
+            builder.RegisterType<EFProjectImageDal>().As<IProjectImageDal>().SingleInstance();
+            builder.RegisterType<WorkManager>().As<IWorkService>().SingleInstance();
+            builder.RegisterType<EFWorkDal>().As<IWorkDal>().SingleInstance();
+            builder.RegisterType<WorkImageManager>().As<IWorkImageService>().SingleInstance();
+            builder.RegisterType<EFWorkImageDal>().As<IWorkImageDal>().SingleInstance();
+
+
+
+
 
 
             builder.RegisterType<UserManager>().As<IUserService>();

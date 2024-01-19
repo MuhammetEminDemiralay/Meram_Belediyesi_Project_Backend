@@ -24,6 +24,14 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Company> Companys { get; set; }
+        public DbSet<News> News{ get; set; }
+        public DbSet<NewsImage> NewsImages{ get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectCategory> ProjectCategories { get; set; }
+        public DbSet<ProjectImage> ProjectImages { get; set; }
+        public DbSet<Work> Works { get; set; }
+        public DbSet<WorkImage> WorkImages { get; set; }
+
 
     }
 }
