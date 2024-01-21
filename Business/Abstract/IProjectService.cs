@@ -11,7 +11,7 @@ namespace Business.Abstract
 {
     public interface IProjectService
     {
-        IDataResult<List<ProjectDetailDto>> GetAll();
+        IDataResult<List<Project>> GetAll();
         IDataResult<ProjectDetailDto> Get(int projectId);
         IDataResult<List<ProjectDetailDto>> GetProjectDetailByCategoryId(int projectCategoryId);
         IResult Add(Project project);

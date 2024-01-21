@@ -37,9 +37,9 @@ namespace Business.Concrete
             return new SuccessDataResult<ProjectDetailDto>(_projectDal.GetProjectDetail(p => p.Id == projectId));
         }
 
-        public IDataResult<List<ProjectDetailDto>> GetAll()
+        public IDataResult<List<Project>> GetAll()
         {
-            return new SuccessDataResult<List<ProjectDetailDto>>(_projectDal.GetProjectDetails());
+            return new SuccessDataResult<List<Project>>(_projectDal.GetAll());
         }
 
         public IDataResult<List<ProjectDetailDto>> GetProjectDetailByCategoryId(int projectCategoryId)

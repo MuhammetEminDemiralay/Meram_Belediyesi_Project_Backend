@@ -40,6 +40,18 @@ namespace WebAPI.Controllers
             return BadRequest();
         }
 
+        [HttpGet("getprojectbycategoryid")]
+        public IActionResult GetProjectDetailByCategoryId(int categoryId)
+        {
+            var result = _projectService.GetProjectDetailByCategoryId(categoryId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest();
+        }
+
         [HttpPost("add")]
         public IActionResult Add(Project project)
         {
