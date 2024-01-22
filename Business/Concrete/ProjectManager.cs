@@ -32,14 +32,13 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IDataResult<ProjectDetailDto> Get(int projectId)
-        {
-            return new SuccessDataResult<ProjectDetailDto>(_projectDal.GetProjectDetail(p => p.Id == projectId));
-        }
-
         public IDataResult<List<Project>> GetAll()
         {
             return new SuccessDataResult<List<Project>>(_projectDal.GetAll());
+        }
+        public IDataResult<ProjectDetailDto> GetProjectDetailByProjectId(int projectId)
+        {
+            return new SuccessDataResult<ProjectDetailDto>(_projectDal.GetProjectDetail(p => p.Id == projectId));
         }
 
         public IDataResult<List<ProjectDetailDto>> GetProjectDetailByCategoryId(int projectCategoryId)

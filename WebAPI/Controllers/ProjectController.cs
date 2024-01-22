@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
         [HttpGet("getprojectbyprojectid")]
         public IActionResult GetProjectDetailByProjectId(int projectId)
         {
-            var result = _projectService.Get(projectId);
+            var result = _projectService.GetProjectDetailByProjectId(projectId);
             if (result.Success)
             {
                 return Ok(result);

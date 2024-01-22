@@ -19,15 +19,12 @@ namespace DataAccess.Concrete.EntityFramework
             using (var context = new MeramContext())
             {
                 var result = from project in context.Projects
-                             join category in context.Categories
-                             on project.CategoryId equals category.Id
-
 
                              select new ProjectDetailDto()
                              {
                                  Id = project.Id,
+                                 CategoryId = project.CategoryId,
                                  Title = project.Title,
-                                 CategoryId = category.Id,
                                  Body = project.Body,
                                  ProjectImagePath = (from img in context.ProjectImages where img.ProjectId == project.Id select img.ProjectImagePath).ToList()
 
@@ -43,13 +40,11 @@ namespace DataAccess.Concrete.EntityFramework
             using (var context = new MeramContext())
             {
                 var result = from project in context.Projects
-                             join category in context.Categories
-                             on project.CategoryId equals category.Id
 
                              select new ProjectDetailDto()
                              {
                                  Id = project.Id,
-                                 CategoryId = category.Id,
+                                 CategoryId = project.CategoryId,
                                  Title = project.Title,
                                  Body = project.Body,
                                  ProjectImagePath = (from img in context.ProjectImages where img.ProjectId == project.Id select img.ProjectImagePath).ToList()
