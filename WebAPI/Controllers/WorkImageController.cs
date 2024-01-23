@@ -63,5 +63,16 @@ namespace WebAPI.Controllers
 
             return BadRequest();
         }
+
+        [HttpPost("update")]
+        public IActionResult Update(IFormFile file, [FromForm] WorkImage workImage)
+        {
+            var result = _workImageService.Update(file, workImage);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
     }
 }
