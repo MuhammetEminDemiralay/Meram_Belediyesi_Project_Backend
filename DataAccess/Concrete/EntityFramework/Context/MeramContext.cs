@@ -31,6 +31,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<ProjectImage> ProjectImages { get; set; }
         public DbSet<Work> Works { get; set; }
         public DbSet<WorkImage> WorkImages { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
 
     }
