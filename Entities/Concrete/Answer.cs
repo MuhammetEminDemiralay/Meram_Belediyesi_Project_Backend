@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Message : IEntity
+    public class Answer : IEntity
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public int MessageId { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
-        public bool President { get; set; }
-        public bool Completed { get; set; }
-        public DateTime? Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }

@@ -44,6 +44,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EFWorkImageDal>().As<IWorkImageDal>().SingleInstance();
             builder.RegisterType<MessageManager>().As<IMessageService>().SingleInstance();
             builder.RegisterType<EFMessageDal>().As<IMessageDal>().SingleInstance();
+            builder.RegisterType<AnswerManager>().As<IAnswerService>().SingleInstance();
+            builder.RegisterType<EFAnswerDal>().As<IAnswerDal>().SingleInstance();
+
 
 
 

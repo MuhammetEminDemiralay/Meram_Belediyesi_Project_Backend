@@ -32,7 +32,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<Work> Works { get; set; }
         public DbSet<WorkImage> WorkImages { get; set; }
         public DbSet<Message> Messages { get; set; }
-
+        public DbSet<Answer> Answers { get; set; }
 
     }
 }
