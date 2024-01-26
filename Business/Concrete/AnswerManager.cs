@@ -21,6 +21,7 @@ namespace Business.Concrete
 
         public IResult Add(Answer answer)
         {
+            answer.Date = DateTime.Now;
             _answerDal.Add(answer);
             return new SuccessResult("Cevap eklendi");
         }
