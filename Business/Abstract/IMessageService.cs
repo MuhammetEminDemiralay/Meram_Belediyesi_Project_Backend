@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Result;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Business.Abstract
     public interface IMessageService
     {
         IDataResult<List<Message>> GetMessagesDetail();
-        IDataResult<List<Message>> GetMessageDetailByUserId(int userId);
+        IDataResult<List<MessageDetailDto>> GetMessageDetailByUserId(int userId);
         IDataResult<Message> GetMessageDetail(int messageId);
         IResult Add(Message message);
         IResult Update(Message message);

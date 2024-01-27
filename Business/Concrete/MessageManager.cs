@@ -2,6 +2,7 @@
 using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,9 +38,9 @@ namespace Business.Concrete
             return new SuccessDataResult<Message>(_messageDal.Get(p => p.Id == messageId));
         }
 
-        public IDataResult<List<Message>> GetMessageDetailByUserId(int userId)
+        public IDataResult<List<MessageDetailDto>> GetMessageDetailByUserId(int userId)
         {
-            return new SuccessDataResult<List<Message>>(_messageDal.GetAll(p => p.UserId == userId));
+            return new SuccessDataResult<List<MessageDetailDto>>(_messageDal.GetMessagesDetail(p => p.UserId == userId));
         }
 
         public IDataResult<List<Message>> GetMessagesDetail()

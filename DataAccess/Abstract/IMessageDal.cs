@@ -12,6 +12,6 @@ namespace DataAccess.Abstract
 {
     public interface IMessageDal : IEntityRepository<Message>
     {
-        List<ProductDetailDto> GetProductsDetail(Expression<Func<ProductDetailDto, bool>> filter = null);
+        List<MessageDetailDto> GetMessagesDetail(Expression<Func<MessageDetailDto, bool>> filter = null);
     }
 }
